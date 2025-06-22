@@ -23,7 +23,7 @@
 
 .section
 {
-    min-height: 100vh;
+    min-height: 50vh;
 }
 
 body .full-width
@@ -45,8 +45,7 @@ body .full-width
   font-size: 6rem;
   text-align: center;
   font-weight: bold;
-  margin-bottom: 5rem;
-  line-height: 1.2;
+  _line-height: 1.2;
 }
 
 .contador {
