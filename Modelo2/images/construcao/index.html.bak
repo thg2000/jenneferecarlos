@@ -1,0 +1,10 @@
+<style>
+.container {
+  width: 100vw; /* Largura da tela */
+  height: 100vh; /* Altura da tela */
+  background-image: url("sua-imagem.jpg");
+  background-size: cover;
+  background-repeat: no-repeat; /* Evita repetição da imagem */
+}
+</style>
+<center><img src="fundo1.png" class="container" >
