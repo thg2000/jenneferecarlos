@@ -58,9 +58,9 @@ body .full-width
 
     .bloco {
       background: #576A4F;
-      padding: 20px;
+      padding: 15px;
       border-radius: 15px;
-      min-width: 60px;
+      min-width: 55px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.3);
     }
 
@@ -77,7 +77,7 @@ body .full-width
       color: #FFFFFF;
     }
 
-    @media (max-width: 500px) {
+    @media (max-width: 400px) {
 
       .tempo {
         font-size: 2rem;
