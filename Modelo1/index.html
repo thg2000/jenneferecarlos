@@ -18,7 +18,19 @@
     <link rel="stylesheet" href="./assets/css/styles.css">
     <link rel="stylesheet" href="./assets/css/variables.css">
 </head>
-
+<script type="text/javascript">
+  (function(){
+    function _start_countdown() {
+      if(typeof startLiveCountdown === 'function'){
+        startLiveCountdown(1760238000000);
+      }
+      else {
+        setTimeout(function(){ _start_countdown(); }, 1000);
+      }
+    }
+    _start_countdown();
+  })();
+</script>
 <body>
 
     <input type="checkbox" aria-label="Close Menu" role="button" id="close-menu" class="close-menu">
@@ -33,13 +45,13 @@
 
             <nav>
                 <ul onclick="getElementById('close-menu').checked = false;">
-                    <li><a href="#intro">Home</a></li>
-                    <li><a href="#flexbox-template">Sobre nós</a></li>
-                    <li><a href="#grid-one">Cerimônia</a></li>
-                    <li><a href="#gallery">Recepção</a></li>
-                    <li><a href="#grid-two">Lista de presentes</a></li>
-                    <li><a href="#table">Confirmar presença</a></li>
-                    <li><a href="#contact">Deixar recado</a></li>
+                    <li class="titulo-secao"><a href="#intro">Home</a></li>
+                    <li class="titulo-secao"><a href="#flexbox-template">Sobre nós</a></li>
+                    <li class="titulo-secao"><a href="#grid-one">Cerimônia</a></li>
+                    <li class="titulo-secao"><a href="#gallery">Recepção</a></li>
+                    <li class="titulo-secao"><a href="#grid-two">Lista de presentes</a></li>
+                    <li class="titulo-secao"><a href="#table">Confirmar presença</a></li>
+                    <li class="titulo-secao"><a href="#contact">Deixar recado</a></li>
                 </ul>
             </nav>
         </div>
@@ -57,6 +69,18 @@
             </div>-->
             <div class="intro-img">
                 <img src="./assets/img/optimized-javascript-img.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section class=" section">
+        <div class="sdn-one-page-section count section-countdown">
+            <div class="sdn-live-countdown-wrap">
+                <h1><span  class="titulo-secao">
+                        Contagem Regressiva
+                    </span>
+                </h1>
+                <div class="countdown-content"></div>
             </div>
         </div>
     </section>

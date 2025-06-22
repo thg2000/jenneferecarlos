@@ -31,3 +31,18 @@ body .full-width
     width: 100%;
     flex: 1 1 100%;
 }
+
+@font-face {
+  font-family: 'CaligrafW';
+  src: url('caw.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.titulo-secao {
+  font-family: 'CaligrafW', cursive;
+  color: #576A4F; /* tom semelhante ao da imagem */
+  font-size: 48px;
+  text-align: center;
+  font-weight: bold;
+}
