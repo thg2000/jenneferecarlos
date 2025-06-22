@@ -42,7 +42,44 @@ body .full-width
 .titulo-secao {
   font-family: 'CaligrafW', cursive;
   color: #576A4F; /* tom semelhante ao da imagem */
-  font-size: 48px;
+  font-size: 6rem;
   text-align: center;
   font-weight: bold;
+  margin-bottom: 5rem;
+  line-height: 1.2;
 }
+
+.contador {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .bloco {
+      background: #576A4F;
+      padding: 20px;
+      border-radius: 15px;
+      min-width: 80px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
+
+    .tempo {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #FFFFFF;
+    }
+
+    .label_contador {
+      font-size: 0.9rem;
+      margin-top: 5px;
+      text-transform: uppercase;
+      color: #FFFFFF;
+    }
+
+    @media (max-width: 500px) {
+
+      .tempo {
+        font-size: 2rem;
+      }
+    }

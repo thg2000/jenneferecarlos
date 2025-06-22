@@ -45,13 +45,13 @@
 
             <nav>
                 <ul onclick="getElementById('close-menu').checked = false;">
-                    <li class="titulo-secao"><a href="#intro">Home</a></li>
-                    <li class="titulo-secao"><a href="#flexbox-template">Sobre nós</a></li>
-                    <li class="titulo-secao"><a href="#grid-one">Cerimônia</a></li>
-                    <li class="titulo-secao"><a href="#gallery">Recepção</a></li>
-                    <li class="titulo-secao"><a href="#grid-two">Lista de presentes</a></li>
-                    <li class="titulo-secao"><a href="#table">Confirmar presença</a></li>
-                    <li class="titulo-secao"><a href="#contact">Deixar recado</a></li>
+                    <li><a href="#intro">Home</a></li>
+                    <li><a href="#flexbox-template">Sobre nós</a></li>
+                    <li><a href="#grid-one">Cerimônia</a></li>
+                    <li><a href="#gallery">Recepção</a></li>
+                    <li><a href="#grid-two">Lista de presentes</a></li>
+                    <li><a href="#table">Confirmar presença</a></li>
+                    <li><a href="#contact">Deixar recado</a></li>
                 </ul>
             </nav>
         </div>
@@ -74,14 +74,60 @@
     </section>
 
     <section class=" section">
-        <div class="sdn-one-page-section count section-countdown">
-            <div class="sdn-live-countdown-wrap">
-                <h1><span  class="titulo-secao">
+        <div class=" main-content">
+                <h2>
                         Contagem Regressiva
-                    </span>
-                </h1>
-                <div class="countdown-content"></div>
-            </div>
+                </h2>
+                
+                <div class="contador">
+                    <div class="bloco">
+                    <div class="tempo" id="dias">000</div>
+                    <div class="label_contador">Dias</div>
+                    </div>
+                    <div class="bloco">
+                    <div class="tempo" id="horas">00</div>
+                    <div class="label_contador">Horas</div>
+                    </div>
+                    <div class="bloco">
+                    <div class="tempo" id="minutos">00</div>
+                    <div class="label_contador">Minutos</div>
+                    </div>
+                    <div class="bloco">
+                    <div class="tempo" id="segundos">00</div>
+                    <div class="label_contador">Segundos</div>
+                    </div>
+                </div>
+
+                <script>
+                    // Altere a data alvo aqui
+                    const dataAlvo = new Date("2025-11-21T20:30:00");
+
+                    function atualizarContador() {
+                    const agora = new Date();
+                    const tempoRestante = dataAlvo - agora;
+
+                    if (tempoRestante <= 0) {
+                        document.getElementById('dias').textContent = '000';
+                        document.getElementById('horas').textContent = '00';
+                        document.getElementById('minutos').textContent = '00';
+                        document.getElementById('segundos').textContent = '00';
+                        return;
+                    }
+
+                    const dias = Math.floor(tempoRestante / (1000 * 60 * 60 * 24));
+                    const horas = Math.floor((tempoRestante / (1000 * 60 * 60)) % 24);
+                    const minutos = Math.floor((tempoRestante / (1000 * 60)) % 60);
+                    const segundos = Math.floor((tempoRestante / 1000) % 60);
+
+                    document.getElementById('dias').textContent = String(dias).padStart(3, '0');
+                    document.getElementById('horas').textContent = String(horas).padStart(2, '0');
+                    document.getElementById('minutos').textContent = String(minutos).padStart(2, '0');
+                    document.getElementById('segundos').textContent = String(segundos).padStart(2, '0');
+                    }
+
+                    setInterval(atualizarContador, 1000);
+                    atualizarContador(); // Inicializa na primeira carga
+                </script>
         </div>
     </section>
 
