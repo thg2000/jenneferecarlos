@@ -39,6 +39,17 @@ body .full-width
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Neusa-Regular';
+  src: url('Neusa-Regular.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+.txt-conteudo{
+    font-family: 'Neusa-Regular';
+    font-size: 2.5rem;
+}
+
 .titulo-secao {
   font-family: 'CaligrafW', cursive;
   color: #576A4F; /* tom semelhante ao da imagem */
