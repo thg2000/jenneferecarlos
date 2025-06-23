@@ -18,11 +18,30 @@
 {
     max-width: 120rem;
     margin: 0 auto;
-    padding: 5rem var(--gap);
-    padding-left: 10rem var(--gap);
-    padding-right: 10rem var(--gap);
-    padding-top: 8rem var(--gap);
-    padding-bottom: 8rem var(--gap);
+    _padding: 10rem var(--gap);
+    _padding-left: 10rem var(--gap);
+    _padding-right: 10rem var(--gap);
+    _padding-top: 8rem var(--gap);
+    _padding-bottom: 8rem var(--gap);
+}
+
+.espacamento_esq_dir{
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+}
+
+.espacamento_top{
+    padding-top: 2rem !important;
+}
+
+.espacamento_bottom{
+    padding-bottom: 2rem !important;
+}
+
+.contagem-regressiva-ajuste {
+  padding-top: -50px !important;
+ 
+  
 }
 
 .section
