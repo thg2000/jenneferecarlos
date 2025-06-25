@@ -185,7 +185,8 @@ body .full-width
   font-size: 18px;
   display: flex;
   align-items: center;
-  gap: 12px; /* Espaço entre ícone e texto */
+  gap: 12px;
+  justify-content: flex-start; /* Alinha tudo à esquerda */
 }
 
 .menu ul li a i {
