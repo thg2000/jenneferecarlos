@@ -176,7 +176,7 @@ body .full-width
 }
 
 .menu ul li {
-  margin-bottom: 15px;
+  margin-bottom: 15px !important;
 }
 
 .menu ul li a {
