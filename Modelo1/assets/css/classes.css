@@ -158,11 +158,15 @@ body .full-width
   right: -100%;
   width: 80%;
   height: 100%;
-  background: white;
+  _background: white;
   transition: right 0.3s ease;
   z-index: 1000;
   padding: 20px;
   box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+
+  background: white url('../img/fundo_menu_mobile.jpg') no-repeat right bottom;
+  background-size: contain;
+
 }
 
 .menu.active {
