@@ -139,3 +139,104 @@ body .full-width
         font-size: 2rem;
       }
     }
+
+
+
+    
+.menu-toggle {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #445b37;
+  z-index: 1001;
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 80%;
+  height: 100%;
+  background: white;
+  transition: right 0.3s ease;
+  z-index: 1000;
+  padding: 20px;
+  box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+}
+
+.menu.active {
+  right: 0;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 50px;
+}
+
+.menu ul li {
+  margin-bottom: 25px;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: #445b37;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.menu ul li a i {
+  background-color: #445b37; /* Verde oliva */
+  color: white;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: #445b37;
+  border: none;
+  color: white;
+  font-size: 20px;
+  padding: 5px 10px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+/* Estilo para desktop */
+@media (min-width: 768px) {
+  .menu {
+    position: static;
+    height: auto;
+    width: auto;
+    background: none;
+    box-shadow: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    right: 0 !important;
+  }
+
+  .menu ul {
+    display: flex;
+    margin: 0;
+  }
+
+  .menu ul li {
+    margin: 0 15px;
+  }
+
+  .menu-toggle, .close-btn {
+    display: none;
+  }
+}
