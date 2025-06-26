@@ -263,3 +263,27 @@ body .full-width
   background: url('../img/capa_site.jpg') no-repeat center top;
   background-size: contain; /* mostra imagem toda sem cortar */
 }
+
+.menu-mobile {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px 20px;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.menu-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #445b37;
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+}
+
+.menu-item img {
+  width: 40vw; /* largura proporcional à tela */
+  max-width: 100px;
+  height: auto;
+  margin-bottom: 8px;
+}
