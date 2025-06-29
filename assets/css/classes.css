@@ -295,3 +295,18 @@ body .full-width
   right: 0;
   text-align: center; /* Opcional, para centralizar horizontalmente */
 }
+
+.botao-mapa {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #356b2e;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+
+  .botao-mapa:hover {
+    background-color: #2b5524;
+  }
