@@ -1,1 +1,274 @@
-EM CONSTRUÇÃO 
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jennefer e Carlos</title>
+    <link rel="shortcut icon" href="./assets/img/icon.svg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/classes.css">
+    <link rel="stylesheet" href="./assets/css/elements.css">
+    <link rel="stylesheet" href="./assets/css/menu.css">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="./assets/css/variables.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<script type="text/javascript">
+  (function(){
+    function _start_countdown() {
+      if(typeof startLiveCountdown === 'function'){
+        startLiveCountdown(1760238000000);
+      }
+      else {
+        setTimeout(function(){ _start_countdown(); }, 1000);
+      }
+    }
+    _start_countdown();
+  })();
+</script>
+<body>
+
+    <input type="checkbox" aria-label="Close Menu" role="button" id="close-menu" class="close-menu">
+    <!-- this is the button: -->
+    <label for="close-menu" title="close menu" class="close-menu-label"></label>
+
+    <aside class="menu white-bg">
+        <div class="main-content menu-content">
+            <!--<h1 onclick="getElementById('close-menu').checked = false;">
+                <a href="#intro"><img src="assets/img/brasao.jpg" height="50"></a>
+            </h1>-->
+
+            <!--<nav class="menu2">
+                <ul onclick="getElementById('close-menu').checked = false;">
+                    <li><a href="#intro"><i class="fas fa-home"></i>Home</a></li>
+                    <li><a href="#flexbox-template"><i class="fas fa-users"></i>Sobre nós</a></li>
+                    <li><a href="#grid-one"><i class="fas fa-church"></i>Cerimônia</a></li>
+                    <li><a href="#gallery"><i class="fas fa-glass-cheers"></i>Recepção</a></li>
+                    <li><a href="#grid-two"><i class="fas fa-gift"></i> Lista de presentes</a></li>
+                    <li><a href="#table"><i class="fas fa-check-circle"></i>Confirmar presença</a></li>
+                    <li><a href="#contact"><i class="fas fa-comment-alt"></i> Deixar recado</a></li>
+                </ul>
+            </nav>-->
+
+            <div class="menu-mobile" onclick="getElementById('close-menu').checked = false;">
+                <div class="menu-item">
+                    <a href="#intro"><img src="assets/img/home.jpg"></a>
+                </div>
+                <div class="menu-item">
+                   <a href="#sobre-nos"><img src="assets/img/sobre_nos.jpg"></a> 
+                </div>
+                <div class="menu-item">
+                   <a href="#cerimonia"> <img src="assets/img/cerimonia.jpg"></a>
+                </div>
+                <div class="menu-item">
+                    <a href="#recepcao"><img src="assets/img/recepcao.jpg"></a>
+                </div>
+                <div class="menu-item">
+                   <a href="#lista-presentes"><img src="assets/img/lista_presentes.jpg"></a> 
+                </div>
+                <div class="menu-item">
+                   <a href="#confirmar-presenca"> <img src="assets/img/confirmar_presenca.jpg"></a>
+                </div>
+            </div>
+
+            
+        </div>
+    </aside>
+
+    <div class="menu-spacing"></div>
+
+    <!--<section id="intro" class="main-bg section">
+        <div class="main-content intro-content">
+            <div class="intro-text-content">
+
+               
+            </div>
+            <div class="intro-img">
+                <img src="./assets/img/optimized-javascript-img.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <div id="intro" class="topo-background">
+
+
+    </div>-->
+
+
+    <section id="intro"  class=" section topo-background">
+        <div class="main-content flexbox-template-content contagem-regressiva-ajuste bottom-text">
+            <br><span class="txt-conteudo"> Contagem Regressiva</span>
+            <div class="contador">
+                    <div class="bloco">
+                    <div class="tempo" id="dias">000</div>
+                    <div class="label_contador">Dias</div>
+                    </div>
+                    <div class="bloco">
+                    <div class="tempo" id="horas">00</div>
+                    <div class="label_contador">Horas</div>
+                    </div>
+                    <div class="bloco">
+                    <div class="tempo" id="minutos">00</div>
+                    <div class="label_contador">Min.</div>
+                    </div>
+                    <div class="bloco">
+                    <div class="tempo" id="segundos">00</div>
+                    <div class="label_contador">Seg.</div>
+                    </div>
+                </div>
+
+                <script>
+                    // Altere a data alvo aqui
+                    const dataAlvo = new Date("2025-11-21T20:30:00");
+
+                    function atualizarContador() {
+                    const agora = new Date();
+                    const tempoRestante = dataAlvo - agora;
+
+                    if (tempoRestante <= 0) {
+                        document.getElementById('dias').textContent = '000';
+                        document.getElementById('horas').textContent = '00';
+                        document.getElementById('minutos').textContent = '00';
+                        document.getElementById('segundos').textContent = '00';
+                        return;
+                    }
+
+                    const dias = Math.floor(tempoRestante / (1000 * 60 * 60 * 24));
+                    const horas = Math.floor((tempoRestante / (1000 * 60 * 60)) % 24);
+                    const minutos = Math.floor((tempoRestante / (1000 * 60)) % 60);
+                    const segundos = Math.floor((tempoRestante / 1000) % 60);
+
+                    document.getElementById('dias').textContent = String(dias).padStart(3, '0');
+                    document.getElementById('horas').textContent = String(horas).padStart(2, '0');
+                    document.getElementById('minutos').textContent = String(minutos).padStart(2, '0');
+                    document.getElementById('segundos').textContent = String(segundos).padStart(2, '0');
+                    }
+
+                    setInterval(atualizarContador, 1000);
+                    atualizarContador(); // Inicializa na primeira carga
+                </script>
+
+        </div>
+    </section>
+
+    <section class=" section">
+        <div class="main-content flexbox-template-content  txt-conteudo espacamento_esq_dir espacamento_top espacamento_bottom">
+        
+                    Com o coração transbordando de gratidão e alegria, queremos dividir com vocês um dos momentos mais especiais da nossa vida: o nosso casamento!
+                <br>
+Nossa caminhada até aqui foi marcada por amor, companheirismo e superação. Enfrentamos juntos momentos difíceis, mas cada desafio só serviu para nos fortalecer e nos unir ainda mais. Hoje, vivemos a certeza de que fomos feitos um para o outro.
+<br>
+Este site foi feito com muito amor e carinho para compartilhar um pouco dos nossos momentos com vocês, pessoas queridas que fazem parte da nossa vida e da nossa felicidade.
+<br>
+Será uma grande alegria ter você conosco neste dia tão esperado. Sua presença tornará a nossa celebração ainda mais inesquecível.
+<br><br>
+Com carinho,<br>
+Jennefer & Carlos
+              
+        </div>
+    </section>    
+
+
+    <section id="sobre-nos" class=" section  fundo-verde-claro">
+        <div class="main-content flexbox-template-content txt-conteudo  espacamento_esq_dir espacamento_top espacamento_bottom">
+
+            <p class="titulo-secao">Sobre nós </p>            
+               Nossa história é feita de encontros, de fé, de risos e de escolhas diárias por caminhar lado a lado.
+<br>
+Desde o início, estivemos sempre juntos, enfrentando tudo com amor, paciência e cumplicidade. Tivemos dias fáceis, dias difíceis, dias em que rimos até chorar e outros em que nos apoiamos em silêncio. Mas em todos eles, estivemos de mãos dadas, certos de que estávamos exatamente onde deveríamos estar: um com o outro.
+<br>
+Nosso amor cresceu, amadureceu e hoje se transforma em algo ainda mais bonito: o casamento. Um novo capítulo que começa cercado por aqueles que amamos e que torcem por nós.
+<br>
+E é com o coração cheio de emoção que esperamos você para celebrar conosco esse dia inesquecível.
+            
+        </div>
+    </section>
+
+    <section id="cerimonia" class="section">
+        <div class="grid main-content  txt-conteudo  espacamento_esq_dir espacamento_top espacamento_bottom">
+      
+            <p class="titulo-secao">Cerimônia </p>  
+            
+        </div>
+    </section>
+
+    <section id="recepcao" class="white-bg section">
+        <div class="main-content grid  txt-conteudo  espacamento_esq_dir espacamento_top espacamento_bottom">
+           
+            <p class="titulo-secao">Recepção </p>  
+            
+        </div>
+    </section>
+
+    <section id="lista-presentes" class="section">
+        <div class="main-content grid  txt-conteudo  espacamento_esq_dir espacamento_top espacamento_bottom">
+            <p class="titulo-secao"> Lista de Presentes</p>  
+           
+        </div>
+    </section>
+
+    <section id="confirmar-presenca" class="white-bg section">
+        <div class="main-content flexbox-template-content">
+
+            <p class="titulo-secao">Confirmar presença </p>  
+           
+        </div>
+    </section>
+
+   <!-- <section id="contact" class="section">
+        <div class="main-content contact-content">
+            <div class="contact-text-content">
+                <p class="titulo-secao">Deixe um recado </p> 
+                
+               
+            </div>
+            <div class="contact-img">
+                <img src="./assets/img/contact-us.svg" alt="HTML, CSS and JavaScript logos being hold by people as big lego pieces">
+            </div>
+
+            <div class="contact-form">
+                <fieldset class="form-grid">
+                    <legend>Send us your message</legend>
+
+                    <div class="form-group">
+                        <label for="first-name">First Name</label>
+                        <input type="text" name="first-name" id="first-name" placeholder="Enter your first name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="last-name">Last Name</label>
+                        <input type="text" name="last-name" id="last-name" placeholder="Enter your last name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" placeholder="Enter your best email">
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="message">Message</label>
+                        <textarea name="message" cols="30" rows="10" id="message" placeholder="Type your message here..."></textarea>
+                    </div>
+                    
+                    <div class="form-group full-width">
+                        <button type submit name="message">Send</button>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+    </section>-->
+    
+    <footer class="footer white-bg">
+       
+    </footer>
+
+    <a id="back-to-top" href="#intro">➤</a>
+</body>
+</html>
