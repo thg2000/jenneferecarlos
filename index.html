@@ -296,64 +296,14 @@ E é com o coração cheio de emoção que esperamos você para celebrar conosco
                 <a href="#img6"><img src="fotos/6.jpg"></a>
             </div>
 
-            <!-- Modais -->
-            <div id="img1" class="modal">
-                <a href="#" class="close">&times;</a>
-                <img src="fotos/1.jpg">
-            </div>
-
-            <!-- Modais -->
-            <div id="img2" class="modal">
-                <a href="#" class="close">&times;</a>
-                <img src="fotos/2.jpg">
-            </div>
-
-            <!-- Modais -->
-            <div id="img3" class="modal">
-                <a href="#" class="close">&times;</a>
-                <img src="fotos/3.jpg">
-            </div>
-
-            <!-- Modais -->
-            <div id="img4" class="modal">
-                <a href="#" class="close">&times;</a>
-                <img src="fotos/4.jpg">
-            </div>
-
-            <!-- Modais -->
-            <div id="img5" class="modal">
-                <a href="#" class="close">&times;</a>
-                <img src="fotos/5.jpg">
-            </div>
-
-            <!-- Modais -->
-            <div id="img6" class="modal">
-                <a href="#" class="close">&times;</a>
-                <img src="fotos/6.jpg">
-            </div>
-
-            <!-- Modais -->
-            <div id="img7" class="modal">
-                <a href="#" class="close">&times;</a>
-                <img src="fotos/7.jpg">
-            </div>
-
-            <!-- Modais -->
-            <div id="img8" class="modal">
-                <a href="#" class="close">&times;</a>
-                <img src="fotos/8.jpg">
-            </div>
-
-            <!-- Modais -->
-            <div id="img9" class="modal">
-                <a href="#" class="close">&times;</a>
-                <img src="fotos/9.jpg">
-            </div>
-
-            <!-- Modais -->
-            <div id="img10" class="modal">
-                <a href="#" class="close">&times;</a>
-                <img src="fotos/10.jpg">
+            <!-- Modal -->
+            <div class="modal" id="modal">
+                <span class="close" id="close">&times;</span>
+                <img src="" alt="Imagem Ampliada" id="modal-img">
+                <div class="controls">
+                <button id="prev">&#10094;</button>
+                <button id="next">&#10095;</button>
+                </div>
             </div>
             
         </div>
@@ -546,5 +496,46 @@ E é com o coração cheio de emoção que esperamos você para celebrar conosco
     </footer>
 
     <a id="back-to-top" href="#intro">➤</a>
+
+     <script>
+    const images = document.querySelectorAll('.gallery img');
+    const modal = document.getElementById('modal');
+    const modalImg = document.getElementById('modal-img');
+    const closeBtn = document.getElementById('close');
+    const prevBtn = document.getElementById('prev');
+    const nextBtn = document.getElementById('next');
+
+    let currentIndex = 0;
+
+    images.forEach((img, index) => {
+      img.addEventListener('click', () => {
+        modal.classList.add('show');
+        modalImg.src = img.src.replace('300x200', '800x600'); // Exemplo de alta resolução
+        currentIndex = index;
+      });
+    });
+
+    closeBtn.addEventListener('click', () => {
+      modal.classList.remove('show');
+    });
+
+    prevBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      modalImg.src = images[currentIndex].src.replace('300x200', '800x600');
+    });
+
+    nextBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % images.length;
+      modalImg.src = images[currentIndex].src.replace('300x200', '800x600');
+    });
+
+    // Fecha ao clicar fora da imagem
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.classList.remove('show');
+      }
+    });
+  </script>
+
 </body>
 </html>

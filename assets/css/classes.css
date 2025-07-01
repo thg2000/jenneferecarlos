@@ -345,8 +345,7 @@ body .full-width
   }
 
 
-
-  .gallery {
+.gallery {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
       gap: 8px;
@@ -372,17 +371,38 @@ body .full-width
       background: rgba(0,0,0,0.9);
       justify-content: center;
       align-items: center;
+      flex-direction: column;
     }
     .modal img {
       max-width: 90%;
       max-height: 80%;
       border-radius: 4px;
     }
-    .modal:target {
+    .modal.show {
       display: flex;
     }
 
-    /* Botão Fechar */
+    /* Botões */
+    .controls {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+    }
+    .controls button {
+      background: rgba(0,0,0,0.5);
+      border: none;
+      color: #fff;
+      font-size: 30px;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+    .controls button:hover {
+      background: rgba(0,0,0,0.7);
+    }
+
     .close {
       position: absolute;
       top: 20px;
@@ -391,6 +411,7 @@ body .full-width
       font-size: 30px;
       text-decoration: none;
       font-weight: bold;
+      cursor: pointer;
     }
     .close:hover {
       color: #ccc;
