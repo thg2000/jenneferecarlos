@@ -410,12 +410,10 @@ E é com o coração cheio de emoção que esperamos você para celebrar conosco
                 document.getElementById('rsvp-form').addEventListener('submit', function(event) {
                 event.preventDefault();
 
-                emailjs.sendForm('service_cgfzz0c', 'template_jlhjdww', this)
+                emailjs.sendForm('service_cgfzz0c', 'template_romav7p', this)
                     .then(function() {
                     alert('Confirmação enviada com sucesso!');
                     document.getElementById('rsvp-form').reset();
-                    document.getElementById('adultos').value = 0;
-                    document.getElementById('criancas').value = 0;
                     }, function(error) {
                     alert('Falha ao enviar: ' + JSON.stringify(error));
                     });
